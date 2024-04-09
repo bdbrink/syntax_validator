@@ -40,6 +40,7 @@ def main():
         check_json_syntax(file_path)
     elif file_path.endswith('.yaml') or file_path.endswith('.yml'):
         check_yaml_syntax(file_path)
+        check_kubernetes_yaml(file_path)
     else:
         print("Unsupported file format. Please provide a JSON or YAML file.")
 

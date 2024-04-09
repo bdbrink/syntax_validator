@@ -1,5 +1,6 @@
 import json
 import yaml
+from kubernetes import client, config
 
 def check_json_syntax(file_path):
     try:

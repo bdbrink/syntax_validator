@@ -19,6 +19,20 @@ def check_yaml_syntax(file_path):
         print(f"Error in {file_path}: Invalid YAML syntax.")
         print(e)
 
+def check_kubernetes_yaml(file_path):
+    try:
+        config.load_kube_config()
+        k8s_client = client.ApiClient()
+        with open(file_path, 'r') as file:
+            client.ExtensionsV1beta1Api(k8s_client).read_namespaced_deployment(
+                body=yaml.safe_load(file),
+                namespace="default"
+            )
+        print(f"{file_path} has valid Kubernetes syntax.")
+    except Exception as e:
+        print(f"Error in {file_path}: Invalid Kubernetes syntax.")
+        print(e)
+
 def main():
     file_path = input("Enter the file path: ")
     if file_path.endswith('.json'):

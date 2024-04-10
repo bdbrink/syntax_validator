@@ -1,6 +1,7 @@
 import json
 import yaml
 from kubernetes import client, config
+from prometheus_api_client import PrometheusConnect
 
 def check_json_syntax(file_path):
     try:
@@ -34,6 +35,15 @@ def check_kubernetes_yaml(file_path):
         print(f"Error in {file_path}: Invalid Kubernetes syntax.")
         print(e)
 
+def check_prometheus_query(query):
+    try:
+        prom = PrometheusConnect()
+        result = prom.custom_query(query)
+        print(f"The query '{query}' is valid.")
+        print(f"Result: {result}")
+    except Exception as e:
+        print(f"Error in Prometheus query '{query}': {e}")
+
 def main():
     file_path = input("Enter the file path: ")
     if file_path.endswith('.json'):
@@ -43,6 +53,9 @@ def main():
         check_kubernetes_yaml(file_path)
     else:
         print("Unsupported file format. Please provide a JSON or YAML file.")
+    
+    prometheus_query = input("Enter Prometheus query to check syntax: ")
+    check_prometheus_query(prometheus_query)
 
 if __name__ == "__main__":
     main()

@@ -12,29 +12,73 @@ certifi==2024.2.2
     #   requests
 charset-normalizer==3.3.2
     # via requests
+contourpy==1.2.1
+    # via matplotlib
+cycler==0.12.1
+    # via matplotlib
+dateparser==1.2.0
+    # via prometheus-api-client
+fonttools==4.51.0
+    # via matplotlib
 google-auth==2.29.0
     # via kubernetes
+httmock==1.4.0
+    # via prometheus-api-client
 idna==3.6
     # via requests
+importlib-resources==6.4.0
+    # via matplotlib
+kiwisolver==1.4.5
+    # via matplotlib
 kubernetes==24.2.0
     # via -r requirements.txt
+matplotlib==3.8.4
+    # via prometheus-api-client
+numpy==1.26.4
+    # via
+    #   contourpy
+    #   matplotlib
+    #   pandas
+    #   prometheus-api-client
 oauthlib==3.2.2
     # via requests-oauthlib
+packaging==24.0
+    # via matplotlib
+pandas==2.2.1
+    # via prometheus-api-client
+pillow==10.3.0
+    # via matplotlib
+prometheus-api-client==0.5.5
+    # via -r requirements.txt
 pyasn1==0.6.0
     # via
     #   pyasn1-modules
     #   rsa
 pyasn1-modules==0.4.0
     # via google-auth
+pyparsing==3.1.2
+    # via matplotlib
 python-dateutil==2.9.0.post0
-    # via kubernetes
+    # via
+    #   dateparser
+    #   kubernetes
+    #   matplotlib
+    #   pandas
+pytz==2024.1
+    # via
+    #   dateparser
+    #   pandas
 pyyaml==6.0.1
     # via
     #   -r requirements.txt
     #   kubernetes
+regex==2023.12.25
+    # via dateparser
 requests==2.31.0
     # via
+    #   httmock
     #   kubernetes
+    #   prometheus-api-client
     #   requests-oauthlib
 requests-oauthlib==2.0.0
     # via kubernetes
@@ -44,12 +88,18 @@ six==1.16.0
     # via
     #   kubernetes
     #   python-dateutil
+tzdata==2024.1
+    # via pandas
+tzlocal==5.2
+    # via dateparser
 urllib3==2.2.1
     # via
     #   kubernetes
     #   requests
 websocket-client==1.7.0
     # via kubernetes
+zipp==3.18.1
+    # via importlib-resources
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools

@@ -78,6 +78,9 @@ def main():
 
     grafana_dashboard = input("Enter Grafana dashboard JSON: ")
     validate_grafana_dashboard(grafana_dashboard)
+    
+    terraform_file = input("Enter Terraform configuration file path: ")
+    validate_terraform_file(terraform_file)
 
 if __name__ == "__main__":
     main()

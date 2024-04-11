@@ -4,6 +4,8 @@
 #
 #    pip-compile requirements.txt
 #
+attrs==23.2.0
+    # via grafanalib
 cachetools==5.3.3
     # via google-auth
 certifi==2024.2.2
@@ -22,6 +24,8 @@ fonttools==4.51.0
     # via matplotlib
 google-auth==2.29.0
     # via kubernetes
+grafanalib==0.7.1
+    # via -r requirements.txt
 httmock==1.4.0
     # via prometheus-api-client
 idna==3.6
@@ -44,7 +48,7 @@ oauthlib==3.2.2
     # via requests-oauthlib
 packaging==24.0
     # via matplotlib
-pandas==2.2.1
+pandas==2.2.2
     # via prometheus-api-client
 pillow==10.3.0
     # via matplotlib

@@ -1,5 +1,7 @@
 import json
 import yaml
+import hcl2
+
 from kubernetes import client, config
 from prometheus_api_client import PrometheusConnect
 from grafanalib.core import GrafanaDashboard

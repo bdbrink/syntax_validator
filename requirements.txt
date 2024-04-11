@@ -5,71 +5,114 @@
 #    pip-compile requirements.txt
 #
 attrs==23.2.0
-    # via grafanalib
+    # via
+    #   -r requirements.txt
+    #   grafanalib
 cachetools==5.3.3
-    # via google-auth
+    # via
+    #   -r requirements.txt
+    #   google-auth
 certifi==2024.2.2
     # via
+    #   -r requirements.txt
     #   kubernetes
     #   requests
 charset-normalizer==3.3.2
-    # via requests
+    # via
+    #   -r requirements.txt
+    #   requests
 contourpy==1.2.1
-    # via matplotlib
+    # via
+    #   -r requirements.txt
+    #   matplotlib
 cycler==0.12.1
-    # via matplotlib
+    # via
+    #   -r requirements.txt
+    #   matplotlib
 dateparser==1.2.0
-    # via prometheus-api-client
+    # via
+    #   -r requirements.txt
+    #   prometheus-api-client
 fonttools==4.51.0
-    # via matplotlib
+    # via
+    #   -r requirements.txt
+    #   matplotlib
 google-auth==2.29.0
-    # via kubernetes
+    # via
+    #   -r requirements.txt
+    #   kubernetes
 grafanalib==0.7.1
     # via -r requirements.txt
 httmock==1.4.0
-    # via prometheus-api-client
-idna==3.6
-    # via requests
+    # via
+    #   -r requirements.txt
+    #   prometheus-api-client
+idna==3.7
+    # via
+    #   -r requirements.txt
+    #   requests
 importlib-resources==6.4.0
-    # via matplotlib
+    # via
+    #   -r requirements.txt
+    #   matplotlib
 kiwisolver==1.4.5
-    # via matplotlib
+    # via
+    #   -r requirements.txt
+    #   matplotlib
 kubernetes==24.2.0
     # via -r requirements.txt
 matplotlib==3.8.4
-    # via prometheus-api-client
+    # via
+    #   -r requirements.txt
+    #   prometheus-api-client
 numpy==1.26.4
     # via
+    #   -r requirements.txt
     #   contourpy
     #   matplotlib
     #   pandas
     #   prometheus-api-client
 oauthlib==3.2.2
-    # via requests-oauthlib
+    # via
+    #   -r requirements.txt
+    #   requests-oauthlib
 packaging==24.0
-    # via matplotlib
+    # via
+    #   -r requirements.txt
+    #   matplotlib
 pandas==2.2.2
-    # via prometheus-api-client
+    # via
+    #   -r requirements.txt
+    #   prometheus-api-client
 pillow==10.3.0
-    # via matplotlib
+    # via
+    #   -r requirements.txt
+    #   matplotlib
 prometheus-api-client==0.5.5
     # via -r requirements.txt
 pyasn1==0.6.0
     # via
+    #   -r requirements.txt
     #   pyasn1-modules
     #   rsa
 pyasn1-modules==0.4.0
-    # via google-auth
+    # via
+    #   -r requirements.txt
+    #   google-auth
 pyparsing==3.1.2
-    # via matplotlib
+    # via
+    #   -r requirements.txt
+    #   matplotlib
 python-dateutil==2.9.0.post0
     # via
+    #   -r requirements.txt
     #   dateparser
     #   kubernetes
     #   matplotlib
     #   pandas
 pytz==2024.1
     # via
+    #   -r requirements.txt
     #   dateparser
     #   pandas
 pyyaml==6.0.1
@@ -77,33 +120,50 @@ pyyaml==6.0.1
     #   -r requirements.txt
     #   kubernetes
 regex==2023.12.25
-    # via dateparser
+    # via
+    #   -r requirements.txt
+    #   dateparser
 requests==2.31.0
     # via
+    #   -r requirements.txt
     #   httmock
     #   kubernetes
     #   prometheus-api-client
     #   requests-oauthlib
 requests-oauthlib==2.0.0
-    # via kubernetes
+    # via
+    #   -r requirements.txt
+    #   kubernetes
 rsa==4.9
-    # via google-auth
+    # via
+    #   -r requirements.txt
+    #   google-auth
 six==1.16.0
     # via
+    #   -r requirements.txt
     #   kubernetes
     #   python-dateutil
 tzdata==2024.1
-    # via pandas
+    # via
+    #   -r requirements.txt
+    #   pandas
 tzlocal==5.2
-    # via dateparser
+    # via
+    #   -r requirements.txt
+    #   dateparser
 urllib3==2.2.1
     # via
+    #   -r requirements.txt
     #   kubernetes
     #   requests
 websocket-client==1.7.0
-    # via kubernetes
+    # via
+    #   -r requirements.txt
+    #   kubernetes
 zipp==3.18.1
-    # via importlib-resources
+    # via
+    #   -r requirements.txt
+    #   importlib-resources
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools

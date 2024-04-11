@@ -54,6 +54,15 @@ def validate_grafana_dashboard(dashboard):
     except Exception as e:
         print(f"Error in Grafana dashboard: {e}")
 
+def validate_terraform_file(file_path):
+    try:
+        with open(file_path, 'r') as file:
+            hcl2.load(file)
+        print(f"{file_path} has valid Terraform configuration.")
+    except Exception as e:
+        print(f"Error in {file_path}: Invalid Terraform configuration.")
+        print(e)
+
 def main():
     file_path = input("Enter the file path: ")
     if file_path.endswith('.json'):

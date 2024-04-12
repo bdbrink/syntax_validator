@@ -90,6 +90,9 @@ def main():
     
     terraform_file = input("Enter Terraform configuration file path: ")
     validate_terraform_file(terraform_file)
+    
+    prometheus_alert = input("Enter Prometheus alert rule: ")
+    validate_prometheus_alert(prometheus_alert)
 
 if __name__ == "__main__":
     main()

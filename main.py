@@ -64,6 +64,14 @@ def validate_terraform_file(file_path):
         print(f"Error in {file_path}: Invalid Terraform configuration.")
         print(e)
 
+
+def validate_prometheus_alert(alert):
+    try:
+        Alert.parse_raw(alert)
+        print("Prometheus alert rule is valid.")
+    except Exception as e:
+        print(f"Error in Prometheus alert rule: {e}")
+
 def main():
     file_path = input("Enter the file path: ")
     if file_path.endswith('.json'):

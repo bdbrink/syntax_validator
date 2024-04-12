@@ -5,6 +5,7 @@ import hcl2
 from kubernetes import client, config
 from prometheus_api_client import PrometheusConnect
 from grafanalib.core import GrafanaDashboard
+from prometheus_alert_parser import Alert
 
 def check_json_syntax(file_path):
     try:
